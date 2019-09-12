@@ -1,16 +1,31 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
+import { FormsModule } from "@angular/forms"
 import { AppComponent } from './app.component';
+import { TodosComponent } from './components/todos/todos.component';
+import { TODOITEMComponent } from './components/todoitem/todoitem.component';
+import { HeaderComponent } from './components/layout/header/header.component';
+import { AddTodoComponent } from './components/add-todo/add-todo.component';
+import { AboutComponent } from './components/pages/about/about.component';
+
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TodosComponent,
+    TODOITEMComponent,
+    HeaderComponent,
+    AddTodoComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
